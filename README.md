@@ -16,3 +16,5 @@
 - Implement offline functionality.
 - Add user preferences for message types.
 - Enhance UI/UX for the options page.
+
+![image](https://github.com/user-attachments/assets/ac2e8464-63df-42de-bd74-c0d11848d7b5)
