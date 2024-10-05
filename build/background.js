@@ -72,14 +72,10 @@ let messages = [
     },
   ];
   
-  // Initial blue badge colour if none set in options
-  let colour = '#0000A0';
-  
   // Update badge with number of unread messages
   const updateBadge = (unreadCount) => {
     const badgeText = unreadCount > 0 ? unreadCount.toString() : '';
     chrome.action.setBadgeText({ text: badgeText });
-    chrome.action.setBadgeBackgroundColor({ color: colour });
   };
   
   // Search through the current messages in Chrome's local storage and check the "read" flag
@@ -100,6 +96,8 @@ let messages = [
     chrome.storage.sync.get(['badgeColour'], (result) => {
       if (result.badgeColour) {
         chrome.action.setBadgeBackgroundColor({ color: result.badgeColour });
+      } else {
+        chrome.action.setBadgeBackgroundColor({ color: '#0000A0' }); // Initial blue badge colour if none set in options
       }
     });
   
