@@ -1,3 +1,5 @@
+## Interview coding challenge - create a Chrome extension
+-----------------------
 ## Features
 - New message arrives every 3 seconds
 - Badge updates to show unread messages
